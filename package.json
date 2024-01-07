@@ -3,16 +3,23 @@
   "version": "1.0.1",
   "description": "A front-end development project tool for rapid development",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "peggy-cli": "./lib/index.js"
   },
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["peggy-cli","vue3","TS"],
-  "author":"lanying",
+  "keywords": [
+    "peggy-cli",
+    "vue3",
+    "TS"
+  ],
+  "author": "lanying",
   "license": "ISC",
   "dependencies": {
+    "@rollup/plugin-json": "^6.1.0",
     "chalk": "4.0.0",
     "commander": "^10.0.1",
     "ejs": "^3.1.9",
@@ -20,9 +27,12 @@
     "fs-extra": "^11.1.1",
     "git-clone": "^0.2.0",
     "inquirer": "8.0.0",
-    "ora": "^5.0.2"
+    "ora": "^5.0.2",
+    "rollup": "^4.9.4"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "shelljs": "^0.8.5"
   }
 }
